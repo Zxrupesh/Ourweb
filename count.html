@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Get ready</title>
+    <link rel="icon" type="image/x-icon" href="class2-10.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        // This code was written by Rupesh Rajbanshi
+function toggle()
+{var newsletter = document.querySelector('.newsletter');
+    newsletter.classList.toggle('active')}
+// This code is written by Rupesh Rajbanshi
+var countDate = new Date('oct 22, 2023 00:00:00').getTime();
+
+function newYear(){
+    var now = new Date().getTime();
+    gap = countDate - now;
+
+    var second = 1000;
+    var minute = second * 60;
+    var hour = minute * 60;
+    var day = hour * 24;
+
+    var d = Math.floor(gap / (day));
+    var h = Math.floor((gap % (day)) / (hour));
+    var m = Math.floor((gap % (hour)) / (minute));
+    var s = Math.floor((gap % (minute)) / second);
+
+    document.getElementById('day').innerText = d;
+    document.getElementById('hour').innerText = h;
+    document.getElementById('minute').innerText = m;
+    document.getElementById('second').innerText = s;
+}
+
+setInterval(function(){newYear();},1000)
+// This code is written by Rupesh Rajbanshi
+function toggle()
+{var newsletter = document.querySelector('.newsletter');
+    newsletter.classList.toggle('active')}
+// This code is written by Rupesh Rajbanshi
+    </script>
+
+<style>
+    /* This Code Was Written By Rupesh Rajbanshi */
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+
+body{background: rgb(162,237,255);
+    background: linear-gradient(90deg, rgba(162,237,255,1) 0%, rgba(199,151,251,1) 100%);}
+
+header{position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;}
+
+header .logo{position: relative;
+                color: rgb(231,255,249);
+                font-size: 28px;
+                text-decoration: none;
+                font-weight: 600;}
+
+header nav{position: relative;}
+
+header nav ul{position: relative;
+                display: flex;}
+
+header nav ul li{list-style: none;}
+
+header nav ul li a{color: aqua;
+                    font-size: 18px;
+                    text-decoration: none;}
+
+header nav ul li a:hover{color: violet;}
+
+section{position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 100px;}
+
+section .contentBx{position: relative;
+                        max-width: 600px;
+                        z-index: 1000;}
+
+section .contentBx h2{font-size: 60px;
+                        color: ghostwhite;
+                        text-transform: uppercase;}
+
+section .contentBx p{font-size: 18px;
+                        color: ghostwhite;
+                        text-transform: uppercase;}
+
+section .contentBx .countdown{display: flex;
+                                margin: 20px 0;}
+                        
+section .contentBx .countdown .time{display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        background: linear-gradient(176deg, rgba(231,255,249,1) 0%, rgba(148,178,248,1) 100%);
+                                        margin-right: 20px;
+                                        font-size: 48px;
+                                        min-width: 110px;
+                                        font-weight: 700;
+                                        padding: 10px 5px 15px;
+                                        border-radius: 4px;
+                                        color: violet;}
+
+section .contentBx .countdown .time span{margin-top: -10px;
+                                                font-size: 20px;
+                                                font-weight: 600;
+                                                color: rgb(231,255,249);}
+
+section .contentBx a{position: relative;
+                        margin-top: 10px;
+                        display: inline-block;
+                        background: linear-gradient(90deg, rgba(162,237,255,1) 0%, rgba(199,151,251,1) 100%);
+                        color: ghostwhite;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        padding: 15px 35px;
+                        text-decoration: none;
+                        border-radius: 40px;}
+
+section .imgBx img{position: relative;
+                        max-width: 500px;
+                        width: 90%;
+                        margin-top: 115px;
+                        z-index: 2;}
+
+section .sci{position: absolute;
+                bottom: 40px;
+                left: 100px;
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                filter: invert(1);}
+
+section .sci li{list-style: none;}
+
+section .sci li{display: block;
+                        margin-right: 20px;
+                        transform: scale(0.8);}
+
+.newsletter{position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                padding: 60px;
+                background: linear-gradient(92deg, rgba(178,142,180,1) 0%, rgba(249,189,199,1) 100%);
+                z-index: 10000;
+                box-shadow: 0 0 0 rgb(178,142,180);
+                border-radius: 2px;
+                border: transparent;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.5s;}
+
+.newsletter.active{visibility: visible;
+                        opacity: 1;}
+
+.newsletter h2{font-size: 48px;
+                color: rgb(221,237,250);}
+
+.newsletter p{font-size: 20px;
+                color: rgb(221,237,250);}
+        
+.newsletter .inputBox{margin-top: 20px;}
+
+.newsletter .inputBox input{padding: 10px;
+                                outline: none;
+                                width: 300px;
+                                font-size: 18px;
+                                border: 1px solid ghostwhite;
+                                background: transparent;}
+
+
+
+.newsletter .inputBox input[type="submit"]{padding: 10px;
+                                                outline: none;
+                                                width: 140px;
+                                                color: ghostwhite;
+                                                background: violet;
+                                                border: transparent;
+                                                letter-spacing: 2px;
+                                                box-sizing: border-box;
+                                                cursor: pointer;
+                                                border-radius: 2px;}
+
+.newsletter.active{visibility: visible;
+                        opacity: 1;}
+
+.newsletter .close{position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width: 40px;
+                        height: 40px;
+                        cursor: pointer;}
+        
+.wave{position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        pointer-events: none;}
+
+@media (max-width=991px){section{
+        flex-direction: column;
+        padding-top: 150px;
+        height: auto;
+}
+        section .contentBx{max-width: 100%;}
+        section .imgBx{margin-top: 0;}
+}
+
+@media (max-width:767px){
+        header{padding: 120px 20px 50x;}
+        section{flex-direction: column;
+                padding-top: 150px;
+                height: auto;}
+
+section .contentBx h2{font-size: 40px;}
+section .contentBx p{font-size: 16px;}
+section .contentBx .countdown .time{font-size: 30px;
+                                        min-width: 70px;
+                                        margin-right: 5px;}
+section .contentBx .countdown .time span{font-size: 14px;}
+section .contentBx a{position: relative;
+                        margin-top: 10px;
+                        display: inline-block;
+                        background: linear-gradient(90deg, rgba(162,237,255,1) 0%, rgba(199,151,251,1) 100%);
+                        color: ghostwhite;
+                        font-size: 16px;
+                        letter-spacing: 2px;
+                        padding: 10px 25px;
+                        text-decoration: none;
+                        border-radius: 40px;}
+section .sci{left: 50px;}
+.newsletter{width: 90%;
+                padding: 30px;}
+.newsletter .inputBox input{margin-top: 10px;
+                                width: 100%;}
+.newsletter h2{font-size: 36px;
+                color: rgb(221,237,250);}
+}
+/* This code is Written by Rupesh Rajbanshi */
+</style>
+</head>
+
+<body>
+    <!-- This Code Was Written By Rupesh Rajbanshi -->
+        <header>
+            <a href="#" class="logo">Yo!!✋</a>
+            <nav>
+                <ul>
+                    <li><a href="video.html">Home🏠</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <img src="curve.png" class="wave">
+            <div class="contentBx">
+                <h2>Coming Soon</h2>
+                <p>yo👀..This Website Is Under Development. I am Working Hard On This Project. I Will Try To Deploy Our Web As Soon As Possible. This Website Will Lunch After.</p>
+                    <div class="countdown">
+                        <div class="time"><div id="day"></div><span>Days</span></div>
+                        <div class="time"><div id="minute"></div><span>Hours</span></div>
+                        <div class="time"><div id="hour"></div><span>Minutes</span></div>
+                        <div class="time"><div id="second"></div><span>Seconds</span></div>
+                    </div>
+                    <a href="#" onclick="toggle();">Notify Me!!</a>
+            </div>
+            <div class="imgBx">
+                <img src="luffyfunny_png.png">
+            </div>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/profile.php?id=100069733458656"><img src="facebook.png"></a></li>
+                <li><a href="https://twitter.com/Rupesh987456"><img src="twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/rupesh_rajbasnhi/"><img src="instagram.png"></a></li>
+            </ul>
+        </section>
+
+        <div class="newsletter">
+            <h2>Stay Tuned</h2>
+            <p>Get Notified At Launch</p>
+            <div class="inputBox">
+                <form action="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBncMbPcQVvvxncrdcNSZNJqrwWMrPRzGgfJKmWrCVbKHnzQRtqRbjWHcddJNhdvfMmkdGf">
+                    <input type="email" name="" required="" placeholder="Email">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <img src="close.png" class="close" onclick="toggle();">
+        </div>
+</body>
+</html>
